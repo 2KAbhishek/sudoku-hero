@@ -1,1 +1,5 @@
+# Binaries
+bin/
 
+# Object files
+*.o
