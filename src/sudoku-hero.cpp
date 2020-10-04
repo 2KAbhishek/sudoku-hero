@@ -107,3 +107,17 @@ bool solveSudoku()
     return false;
 }
 
+int main()
+{
+    inputGrid();
+    cout << "Entered puzzle :" << endl;
+    showGrid();
+    if (solveSudoku() == true)
+    {
+        cout << "Solved puzzle :" << endl;
+        showGrid();
+    }
+    else
+        cout << "No solution exists";
+}
+
