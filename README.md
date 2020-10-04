@@ -14,7 +14,7 @@ Solving a sudoku problem and It's taking too long? sudoku-hero to the rescue
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed the latest version of `<coding_language/dependency/requirement_1>`
+- You have installed the latest version of `g++ & make`
 
 ## Installing sudoku-hero
 
@@ -22,11 +22,11 @@ To install sudoku-hero, follow these steps:
 
 ```bash
 git clone https://github.com/2kabhishek/sudoku-hero
-cd sudoku-hero/src
+cd sudoku-hero/
 make
 ```
 
-This will generate a `sudoku-hero` binary in the bin folder/
+This will generate a `sudoku-hero` binary in the bin folder.
 
 ## Using sudoku-hero
 
