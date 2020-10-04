@@ -22,3 +22,13 @@ bool isPresentInRow(int row, int num)
     return false;
 }
 
+// Check whether num is present in 3x3 box or not
+bool isPresentInBox(int boxStartRow, int boxStartCol, int num)
+{
+    for (int row = 0; row < 3; row++)
+        for (int col = 0; col < 3; col++)
+            if (grid[row + boxStartRow][col + boxStartCol] == num)
+                return true;
+    return false;
+}
+
