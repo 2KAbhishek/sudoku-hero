@@ -32,3 +32,16 @@ bool isPresentInBox(int boxStartRow, int boxStartCol, int num)
     return false;
 }
 
+// Get the sudoku grid from user input
+void inputGrid()
+{
+    cout << "Enter the sudoku puzzle, 0 for empty space" << endl;
+    for (int row = 0; row < N; row++)
+    {
+        for (int col = 0; col < N; col++)
+        {
+            cin >> grid[row][col];
+        }
+    }
+}
+
