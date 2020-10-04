@@ -69,3 +69,13 @@ void showGrid()
     cout << "-------------------------" << endl;
 }
 
+// Find empty location and update row and column
+bool findEmptyCell(int &row, int &col)
+{
+    for (row = 0; row < N; row++)
+        for (col = 0; col < N; col++)
+            if (grid[row][col] == 0) //marked with 0 is empty
+                return true;
+    return false;
+}
+
