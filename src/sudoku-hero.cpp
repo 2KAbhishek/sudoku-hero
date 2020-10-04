@@ -45,3 +45,27 @@ void inputGrid()
     }
 }
 
+// Display the sudoku grid
+void showGrid()
+{
+    cout << "-------------------------" << endl;
+    for (int row = 0; row < N; row++)
+    {
+        for (int col = 0; col < N; col++)
+        {
+            if (col == 0 || col == 3 || col == 6)
+                cout << "| ";
+            cout << grid[row][col] << " ";
+        }
+        cout << "| ";
+
+        if (row == 2 || row == 5)
+        {
+            cout << endl;
+            cout << "-------------------------";
+        }
+        cout << endl;
+    }
+    cout << "-------------------------" << endl;
+}
+
