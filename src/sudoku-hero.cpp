@@ -85,3 +85,25 @@ bool isValidCell(int row, int col, int num)
     return !isPresentInRow(row, num) && !isPresentInCol(col, num) && !isPresentInBox(row - row % 3, col - col % 3, num);
 }
 
+// Solves puzzle recursively
+bool solveSudoku()
+{
+    int row, col;
+    // True when all cells are filled
+    if (!findEmptyCell(row, col))
+        return true;
+    for (int num = 1; num < 10; num++)
+    {
+        if (isValidCell(row, col, num))
+        {
+            grid[row][col] = num;
+            // Recursively check other cells in grid
+            if (solveSudoku())
+                return true;
+            // Backtrack if invalid solution
+            grid[row][col] = 0;
+        }
+    }
+    return false;
+}
+
