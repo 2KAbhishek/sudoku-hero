@@ -79,3 +79,9 @@ bool findEmptyCell(int &row, int &col)
     return false;
 }
 
+// True if item not found in col, row and current 3x3 box
+bool isValidCell(int row, int col, int num)
+{
+    return !isPresentInRow(row, num) && !isPresentInCol(col, num) && !isPresentInBox(row - row % 3, col - col % 3, num);
+}
+
