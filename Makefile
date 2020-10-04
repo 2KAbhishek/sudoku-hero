@@ -6,7 +6,7 @@ SRC = src/sudoku-hero.cpp
 all: sudoku-hero
 
 # @ macro evaluates to current target
-invaders: bin
+sudoku-hero: bin
 	$(CC) $(CFLAGS) $(SRC) -o ./bin/$@
 
 bin:
